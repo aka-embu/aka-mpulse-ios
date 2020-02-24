@@ -259,7 +259,7 @@ typedef NS_ENUM(NSUInteger, MPulseDataOnDuplicate) {
 
 @interface MPulse : NSObject <AkaConfigurable>
 
-// mPulse Build Number - 21.11.1
+// mPulse Build Number - 21.11.2
 extern NSString *const MPULSE_BUILD_VERSION_NUMBER;
 
 // Whether MPulse has been initialized. Tests can wait on this to know interception will occur.
