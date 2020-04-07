@@ -253,13 +253,19 @@ typedef NS_ENUM(NSUInteger, MPulseDataOnDuplicate) {
  */
 @property (readwrite) int maxActionResources;
 
+/**
+ * Tell mPulse to strip the queryString if value is non-zero, nil if the server configuration
+ * should be used, 0 if the query string should not be changed.
+ */
+@property (readwrite) NSNumber *stripQueryString;
+
 @end
 #endif /* MPulseSettings_h */
 
 
 @interface MPulse : NSObject <AkaConfigurable>
 
-// mPulse Build Number - 21.12.1
+// mPulse Build Number - 21.13.0
 extern NSString *const MPULSE_BUILD_VERSION_NUMBER;
 
 // Whether MPulse has been initialized. Tests can wait on this to know interception will occur.
