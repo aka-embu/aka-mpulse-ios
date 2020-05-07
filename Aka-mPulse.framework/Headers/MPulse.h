@@ -265,7 +265,7 @@ typedef NS_ENUM(NSUInteger, MPulseDataOnDuplicate) {
 
 @interface MPulse : NSObject <AkaConfigurable>
 
-// mPulse Build Number - 21.13.0
+// mPulse Build Number - 21.21.0
 extern NSString *const MPULSE_BUILD_VERSION_NUMBER;
 
 // Whether MPulse has been initialized. Tests can wait on this to know interception will occur.
@@ -907,6 +907,15 @@ typedef MPFilterResult* (^MPURLFilter) (NSString *url);
  * @param name The name of the action
  */
 -(void) startActionWithName:(NSString *)name;
+
+/**
+ * @brief cancels an action
+ *
+ * Deletes any active action beacon and effectively cancels the action recorded.
+ * This also means any custom metric/timer you may have set to be collected with
+ * the action will be lost.
+ */
+-(void) cancelAction;
 
 /**
  * @brief stops an action explicitly.
