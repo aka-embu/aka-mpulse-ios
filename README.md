@@ -7,6 +7,11 @@ To install and use the mPulse library in your iOS project, see our [Getting Star
 
 ## Release Notes
 
+### 21.90 (2021-Jan-19)
+Fixes an issue where the SDK could malfunction due to insufficient file permissions.
+Fixes an issue with cleaning old log files.
+Fixes an issue that could create a name conflict when using the SDK alongside with the CocoaLumberjack library.
+
 ### 21.70 (2020-Oct-21)
 Fixes an issue with missing timers/metrics added right before stopping the action.
 
